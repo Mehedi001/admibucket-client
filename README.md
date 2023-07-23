@@ -1,6 +1,6 @@
 # AdmiBucket
 
--Live Preview:
+-Live Preview Link:
 
 This is college booking website:
 
@@ -14,7 +14,7 @@ This is college booking website:
 
 - My College Route user can see His/Her submitted college list & they can see selected college detail from this route.
 
--This website have login/logout functionality with firebase. login with email & password. also login with google & facebook. if user successfully registered/login they can see their name in navbar section & see their photo in navbar. user also reset their password.
+- This website have login/logout functionality with firebase. login with email & password. also login with google & facebook. if user successfully registered/login they can see their name in navbar section & see their photo in navbar. user also reset their password.
 
 - 404 Page Created for invalid route.
 
