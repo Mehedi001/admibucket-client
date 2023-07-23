@@ -18,7 +18,7 @@ const SingleCollege = () => {
                     <img className=" h-[500px] w-[800px] rounded-md" src={college.collegeIMG} alt="" />
                 </div>
                 <div className=" my-4 w-9/12">
-                    <h1 className="text-4xl text-[#187E89] font-bold">{college.collegeName}</h1>
+                    <h1 className="text-4xl underline text-[#187E89] font-bold">{college.collegeName}</h1>
                     <p className="font-bold mt-4">Admission Process: <span className="font-normal">{college.admissionProcess}</span></p>
                     <p className="font-bold">Events Details: <span className="font-normal">{college.eventsDetails}</span></p>
                     <p className="font-bold">Research Works: <span className="font-normal ">{college.researchWorks}</span></p>

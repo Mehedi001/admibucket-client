@@ -1,11 +1,13 @@
 
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 
 const Header = () => {
 
-
+    const { user } = useContext(AuthContext);
     const navItem = <>
         <li><Link className="hover:bg-[#187E89] hover:text-white text-[#187E89]" to="/">Home</Link></li>
         <li><Link className="hover:bg-[#187E89] hover:text-white text-[#187E89]" to="/colleges">Colleges</Link></li>
@@ -35,11 +37,15 @@ const Header = () => {
             <div className="navbar-end">
                 <div className="avatar">
                     <div className="w-12 mr-4 rounded-full ring ring-[#187E89] ring-offset-base-100 ring-offset-2">
-                        <img title="This is Profile photo of user" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" alt="this is profile photo of user" />
+                        {
+                            user ? <img src={user.photoURL} /> : <img title="This is Profile photo of user" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/2048px-Circle-icons-profile.svg.png" alt="this is profile photo of user" />
+                        }
                     </div>
                 </div>
 
-                <Link to="/login" className="btn border-0 hover:bg-[#061f12] bg-[#187E89] hover:text-white text-[#FFE5B4]">Logout</Link> : <Link to="/login" className="btn border-0 hover:bg-[#061f12] bg-[#187E89] hover:text-white text-[#FFE5B4]">Login</Link>
+                {
+                    user ? <Link to="/login" className="btn border-0 hover:bg-[#0e4f57] bg-[#187E89] text-white ">Logout</Link> : <Link to="/login" className="btn border-0 hover:bg-[#0e4f57] bg-[#187E89] text-white ">Login</Link>
+                }
 
             </div>
             <div className="hr-main">

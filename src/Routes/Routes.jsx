@@ -6,6 +6,8 @@ import MyColleges from "../Pages/MyCollege/MyColleges";
 import NotFound from "../components/NotFound/NotFound";
 import AllColleges from "../Pages/Colleges/AllColleges";
 import SingleCollege from "../Pages/Colleges/SingleCollege";
+import Login from "../Pages/Login/Login";
+import Registration from "../Pages/Login/Registration/Registration";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
             {
                 path:"colleges/:id",
                 element: <SingleCollege></SingleCollege>
+            },
+            {
+                path:"login",
+                element: <Login></Login>
+            },
+            {
+                path:"registration",
+                element: <Registration></Registration>
             }
         ]
     },

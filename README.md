@@ -1,6 +1,6 @@
 # AdmiBucket
 
--Live Preview Link:
+Live Preview Link: 
 
 This is college booking website:
 

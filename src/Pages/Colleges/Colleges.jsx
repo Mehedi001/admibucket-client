@@ -15,7 +15,7 @@ const Colleges = () => {
                 colleges && colleges.map(college => 
                 <div className="border-b-2 lg:border-b-0 p-2 lg:border-e-2 " key={college._id}>
                     <div>
-                    <img className=" h-[400px] w-[600px] rounded-md" src={college.collegeIMG} alt="" />
+                    <img className=" h-[300px] w-[700px] rounded-md" src={college.collegeIMG} alt="" />
                     </div>
                     <div className=" my-4">
                     <h1 className="text-4xl text-[#187E89] font-bold">{college.collegeName}</h1>
