@@ -30,8 +30,7 @@ const AdmissionForm = () => {
         const birthday = form.birthday.value;
         const photo = form.photo.value;
         const id = form.id.value;
-        const _id= ( 'ObjectId' + ' ' + (id));
-        const newStudent = { name, email, college, _id, photo, subject, number, address, birthday };
+        const newStudent = { name, email, college, id, photo, subject, number, address, birthday };
         
 
         fetch('http://localhost:3000/admission', {

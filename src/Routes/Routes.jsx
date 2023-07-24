@@ -10,6 +10,8 @@ import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Login/Registration/Registration";
 import PrivateRoute from "./PrivateRoutes";
 import AdmissionForm from "../Pages/Admission/AdmissionForm";
+import ReviewForm from "../Pages/Review/ReviewForm";
+
 
 const router = createBrowserRouter([
     {
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path:"myCollege",
-                element: <MyColleges></MyColleges>
+                element: <PrivateRoute><MyColleges></MyColleges></PrivateRoute>
             },
             {
                 path:"colleges/:id",
@@ -47,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path:"admission/:id",
                 element: <PrivateRoute><AdmissionForm></AdmissionForm></PrivateRoute>
+            },
+            {
+                path:"review/:id",
+                element: <PrivateRoute><ReviewForm></ReviewForm></PrivateRoute>
             }
         ]
     },

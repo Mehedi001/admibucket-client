@@ -11,7 +11,7 @@ const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(AuthContext);
     const location = useLocation();
     if (loading) {
-        return (<div className="h-screen bg-[#18110e]"><ImSpinner4 className='text-9xl h-screen text-red-600 mx-auto animate-spin '/></div>)
+        return (<div className="h-screen "><ImSpinner4 className='text-9xl h-screen text-[#187E89] mx-auto animate-spin '/></div>)
     }
     if (user) {
         return children;

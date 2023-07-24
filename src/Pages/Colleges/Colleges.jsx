@@ -10,7 +10,10 @@ const Colleges = () => {
             .then(data => setColleges(data.slice(0, 3)))
     }, [])
     return (
+        <div>
+            <h1 className="text-center my-8 text-[#187E89] text-4xl font-bold">Popular College</h1>
         <div className="flex flex-col lg:flex-row gap-4 mx-auto my-12 w-11/12 lg:w-9/12">
+
             {
                 colleges && colleges.map(college => 
                 <div className="border-b-2 lg:border-b-0 p-2 lg:border-e-2 " key={college._id}>
@@ -28,6 +31,7 @@ const Colleges = () => {
                 </div>)
             }
             
+        </div>
         </div>
     );
 };

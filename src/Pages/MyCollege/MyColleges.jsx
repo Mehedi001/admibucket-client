@@ -44,8 +44,8 @@ const MyColleges = () => {
                                             <tr key={college._id}>
                                                 <th>{i + 1}</th>
                                                 <td >{college.college}</td>
-                                                <td><Link to={`/colleges/${college._id}`} className="rounded-md  border text-green-600  px-1 py-1 border-green-600 hover:bg-green-600  hover:text-white">Details</Link></td>
-                                                <td><Link to={`/admission/${college._id}`} className="rounded-md  border text-green-600  px-2 py-1 border-green-600 hover:bg-green-600  hover:text-white">Give Review</Link></td>
+                                                <td><Link to={`/colleges/${college.id}`} className="rounded-md  border text-green-600  px-1 py-1 border-green-600 hover:bg-green-600  hover:text-white">Details</Link></td>
+                                                <td><Link to={`/review/${college.id}`} className="rounded-md  border text-green-600  px-2 py-1 border-green-600 hover:bg-green-600  hover:text-white">Give Review</Link></td>
 
                                             </tr>
                                 )
