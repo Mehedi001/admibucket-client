@@ -1,6 +1,6 @@
 # AdmiBucket
 
-Live Preview Link: 
+Live Preview Link: https://admibucket.netlify.app/
 
 This is college booking website:
 
