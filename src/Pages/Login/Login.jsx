@@ -139,7 +139,7 @@ const Login = () => {
 
             <p className="signup-link">
                 Don't have an account?
-                <Link to="/registration" className="signup-link link" href="#"> Register now</Link>
+                <Link to="/registration" className="signup-link link" href="#"> Login</Link>
             </p>
         </div>
     );

@@ -150,3 +150,10 @@
     opacity: 0.1;
   }
   
+
+  @media screen and (max-width:576px) {
+    .form-container {
+      width: 350px;
+      
+    }
+  }

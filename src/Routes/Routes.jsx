@@ -8,6 +8,8 @@ import AllColleges from "../Pages/Colleges/AllColleges";
 import SingleCollege from "../Pages/Colleges/SingleCollege";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Login/Registration/Registration";
+import PrivateRoute from "./PrivateRoutes";
+import AdmissionForm from "../Pages/Admission/AdmissionForm";
 
 const router = createBrowserRouter([
     {
@@ -32,7 +34,7 @@ const router = createBrowserRouter([
             },
             {
                 path:"colleges/:id",
-                element: <SingleCollege></SingleCollege>
+                element: <PrivateRoute><SingleCollege></SingleCollege></PrivateRoute>
             },
             {
                 path:"login",
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path:"registration",
                 element: <Registration></Registration>
+            },
+            {
+                path:"admission/:id",
+                element: <PrivateRoute><AdmissionForm></AdmissionForm></PrivateRoute>
             }
         ]
     },

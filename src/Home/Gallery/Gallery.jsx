@@ -1,6 +1,4 @@
 // import { Swiper, SwiperSlide } from "swiper";
-
-
 // import "swiper/css";
 // import "swiper/css/effect-coverflow";
 // import "swiper/css/pagination";
@@ -11,7 +9,7 @@
 
 const Gallery = () => {
     return (
-      <h2>this is gallery</h2>
+      <h2>hello</h2>
       //   <div className="py-12 p-8">
       //      <h1 className="text-4xl font-light my-2 text-[#c58f63]">Selected Photo of This Month:</h1>
       //      <p className="text-gray-400 text-sm tracking-wider pb-6 "> Selected best photo of the month | slide to view more photo</p>

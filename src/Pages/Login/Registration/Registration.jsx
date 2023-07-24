@@ -26,7 +26,6 @@ const Registration = () => {
         const password = form.password.value;
         const photo = form.photo.value;
         const newUser = { name, email, photo, password };
-        console.log(newUser)
         register(email, password)
             .then(result => {
                 const user = result.user;
@@ -102,7 +101,7 @@ const Registration = () => {
 
             <p className="signup-link">
                 Already have an account?
-                <Link to="/login" className="signup-link link" href="#"> Login now</Link>
+                <Link to="/login" className="signup-link link" href="#"> Registration</Link>
             </p>
         </div>
     );
