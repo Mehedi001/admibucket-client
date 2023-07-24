@@ -2,6 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const MyColleges = () => {
@@ -9,7 +10,7 @@ const MyColleges = () => {
     const [colleges, setColleges] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/usermail?email=${user?.email}`)
+        fetch(`https://admibucket-server.vercel.app/usermail?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
 
@@ -18,6 +19,9 @@ const MyColleges = () => {
     }, [user?.email])
     return (
         <div className='lg:px-8 py-4 lg:py-8'>
+            <Helmet>
+                <title> My College | Admibucket</title>
+            </Helmet>
 
                 <div className="my-4 text-center">
                     <h1 className="text-3xl  font-semibold text-[#10575f] underline">Total College Booked: {colleges.length} </h1>
@@ -29,12 +33,12 @@ const MyColleges = () => {
                     colleges.length > 0 ?
                     <div className="bg-white h-screen rounded-xl  my-12">
                         <div className="overflow-x-auto">
-                            <table className="table table-compact w-9/12 mx-auto ">
+                            <table className="table table-compact w-full lg:w-9/12 mx-auto ">
                                 <thead>
                                     <tr>
                                         <th></th>
                                         <th>College Name</th>
-                                        <th>Action</th>
+                                        <th className="hidden lg:block">Action</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -44,7 +48,7 @@ const MyColleges = () => {
                                             <tr key={college._id}>
                                                 <th>{i + 1}</th>
                                                 <td >{college.college}</td>
-                                                <td><Link to={`/colleges/${college.id}`} className="rounded-md  border text-green-600  px-1 py-1 border-green-600 hover:bg-green-600  hover:text-white">Details</Link></td>
+                                                <td className="hidden lg:block"><Link to={`/colleges/${college.id}`} className="rounded-md  border text-green-600  px-1 py-1 border-green-600 hover:bg-green-600  hover:text-white">Details</Link></td>
                                                 <td><Link to={`/review/${college.id}`} className="rounded-md  border text-green-600  px-2 py-1 border-green-600 hover:bg-green-600  hover:text-white">Give Review</Link></td>
 
                                             </tr>
@@ -55,7 +59,7 @@ const MyColleges = () => {
                                 <tr>
                                     <th></th>
                                     <th></th>
-                                    <th></th>
+                                    <th className="hidden lg:block"></th>
                                     <th></th>
 
                                 </tr>

@@ -1,8 +1,10 @@
+import { Slide } from "react-awesome-reveal";
 
 
 const Footer = () => {
     return (
-        <footer className="footer lg:flex lg:justify-center lg:items-center gap:12 lg:gap-80 p-10  bg-[#187E89]/20 text-base-content">
+        <Slide direction="up">
+            <footer className="footer lg:flex lg:justify-center lg:items-center gap:12 lg:gap-80 p-10  bg-[#187E89]/20 text-base-content">
             <div>
                 <img className="w-16" src="/logo.png" alt="" />
                 <h1 className="text-3xl font-bold">ADMIBUCKET</h1>
@@ -23,6 +25,7 @@ const Footer = () => {
             </div>
 
         </footer>
+        </Slide>
     );
 };
 

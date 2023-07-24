@@ -36,7 +36,7 @@ const Login = () => {
                 const newUser = { name: loggedInUser.displayName, role: 'Student', email: loggedInUser.email, photo: loggedInUser.photoURL };
 
 
-                fetch('http://localhost:3000//users', {
+                fetch('https://admibucket-server.vercel.app//users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -95,7 +95,7 @@ const Login = () => {
     return (
         <div className="form-container mx-auto my-14">
             <Helmet>
-                <title>Admibucket | Login</title>
+                <title> Login | Admibucket</title>
             </Helmet>
             <div className="logo-container">
                 Please Login
@@ -128,7 +128,7 @@ const Login = () => {
                     <input required="" name="password" placeholder="Enter your password" id="password" type="password" />
                 </div>
 
-                <button type="submit" className="form-submit-btn">Sign In</button>
+                <button type="submit" className="form-submit-btn">Login</button>
             </form>
 
 
@@ -139,7 +139,7 @@ const Login = () => {
 
             <p className="signup-link">
                 Don't have an account?
-                <Link to="/registration" className="signup-link link" href="#"> Login</Link>
+                <Link to="/registration" className="signup-link link" href="#"> Register</Link>
             </p>
         </div>
     );

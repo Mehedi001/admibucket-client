@@ -33,7 +33,7 @@ const Registration = () => {
                 setSuccess(`${user.email} Successfully Registered`)
                 updateProfile(auth.currentUser, { displayName: name, photoURL: photo })
                     .then(() => {
-                        fetch('http://localhost:3000/users', {
+                        fetch('https://admibucket-server.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -68,7 +68,7 @@ const Registration = () => {
     return (
         <div className="form-container mx-auto my-14">
             <Helmet>
-                <title>Admibucket | Registration</title>
+                <title> Registration | Admibucket</title>
             </Helmet>
             <div className="logo-container">
                 Please Register
@@ -93,7 +93,7 @@ const Registration = () => {
                     <input required="" name="password" placeholder="Enter your password" id="password" type="password" />
                 </div>
 
-                <button type="submit" className="form-submit-btn">Sign In</button>
+                <button type="submit" className="form-submit-btn">Register</button>
             </form>
 
             <p className="text-red-600 note">{error}</p>
@@ -101,7 +101,7 @@ const Registration = () => {
 
             <p className="signup-link">
                 Already have an account?
-                <Link to="/login" className="signup-link link" href="#"> Registration</Link>
+                <Link to="/login" className="signup-link link" href="#"> Login</Link>
             </p>
         </div>
     );

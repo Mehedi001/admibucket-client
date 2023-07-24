@@ -12,7 +12,7 @@ const AdmissionForm = () => {
     const {user} = useContext(AuthContext);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/colleges/${id}`)
+        fetch(`https://admibucket-server.vercel.app/colleges/${id}`)
             .then(res => res.json())
             .then(data => setColleges(data))
     }, [])
@@ -33,7 +33,7 @@ const AdmissionForm = () => {
         const newStudent = { name, email, college, id, photo, subject, number, address, birthday };
         
 
-        fetch('http://localhost:3000/admission', {
+        fetch('https://admibucket-server.vercel.app/admission', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -60,7 +60,7 @@ const AdmissionForm = () => {
     return (
         <div className="form-container mx-auto my-14">
             <Helmet>
-                <title>Admibucket | Admission Form</title>
+                <title> Admission Form | Admibucket</title>
             </Helmet>
             <div className="logo-container">
                 Admission Form

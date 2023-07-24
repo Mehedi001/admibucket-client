@@ -2,6 +2,7 @@
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import './Gallery.css'
+import { Slide } from "react-awesome-reveal"
 
 
 
@@ -33,7 +34,8 @@ const Gallery = () => {
   )
 
     return (
-      <div>
+      <Slide direction="up">
+        <div className="hidden lg:block">
         <h1 className="text-center my-8 text-[#187E89] text-4xl font-bold">Graduate's Group Picture</h1>
         
       <div className="wrapper my-12 lg:my-36">
@@ -54,6 +56,7 @@ const Gallery = () => {
       </div>
     </div>
       </div>
+      </Slide>
     );
 };
 

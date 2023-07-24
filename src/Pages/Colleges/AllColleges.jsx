@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
+import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 
 const AllColleges = () => {
     const [colleges, setColleges] = useState();
     useEffect(() => {
-        fetch('http://localhost:3000/colleges')
+        fetch('https://admibucket-server.vercel.app/colleges')
             .then(res => res.json())
             .then(data => setColleges(data))
     }, [])
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto my-12 w-11/12 lg:w-9/12">
+        <Fade>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto my-12 w-11/12 lg:w-9/12">
+            <Helmet>
+                <title> Colleges | Admibucket</title>
+            </Helmet>
             {
                 colleges && colleges.map(college => 
                 <div className="border-b-2 lg:border-b-0 p-2 lg:border-e-2 " key={college._id}>
@@ -29,6 +35,7 @@ const AllColleges = () => {
             }
             
         </div>
+        </Fade>
     );
 };
 

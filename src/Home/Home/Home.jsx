@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Colleges from "../../Pages/Colleges/Colleges";
 import Review from "../../Pages/Review/Review";
 import Banner from "../Banner/Banner";
@@ -8,6 +9,10 @@ import ResearchLink from "./ResearchLink/ResearchLink";
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title> Home | Admibucket</title>
+            </Helmet>
+
             <Banner></Banner>
             <hr className="hr-main my-6 "/>
             <Colleges></Colleges>

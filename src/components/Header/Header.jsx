@@ -31,7 +31,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-center gap-2 lg:flex items-center">
-                <img className="w-8" src="/logo.png" alt="" />
+                <img className="w-8 hidden lg:block" src="/logo.png" alt="" />
                 <Link to="/" className="text-2xl font-bold text-[#187E89]">ADMIBUCKET</Link>
                 
             </div>
@@ -49,7 +49,7 @@ const Header = () => {
                 </div>
 
                 {
-                    user ? <button onClick={logout} className="btn border-0 hover:bg-[#0e4f57] bg-[#187E89] text-white ">Logout</button> : <Link to="/login" className="btn border-0 hover:bg-[#0e4f57] bg-[#187E89] text-white ">Login</Link>
+                    user ? <button onClick={logout} className="btn btn-sm lg:btn-md border-0 hover:bg-[#0e4f57] bg-[#187E89] text-white ">Logout</button> : <Link to="/login" className="btn lg:btn-md btn-sm border-0 hover:bg-[#0e4f57] bg-[#187E89] text-white ">Login</Link>
                 }
 
             </div>

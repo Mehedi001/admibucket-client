@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
+import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 
 const Colleges = () => {
     const [colleges, setColleges] = useState();
     useEffect(() => {
-        fetch('http://localhost:3000/colleges')
+        fetch('https://admibucket-server.vercel.app/colleges')
             .then(res => res.json())
             .then(data => setColleges(data.slice(0, 3)))
     }, [])
     return (
-        <div>
+        <Fade>
+            <div>
             <h1 className="text-center my-8 text-[#187E89] text-4xl font-bold">Popular College</h1>
         <div className="flex flex-col lg:flex-row gap-4 mx-auto my-12 w-11/12 lg:w-9/12">
 
@@ -33,6 +35,7 @@ const Colleges = () => {
             
         </div>
         </div>
+        </Fade>
     );
 };
 
