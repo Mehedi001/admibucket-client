@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Colleges from "../../Pages/Colleges/Colleges";
 import Review from "../../Pages/Review/Review";
 import Banner from "../Banner/Banner";
@@ -14,7 +14,7 @@ const Home = () => {
             </Helmet>
 
             <Banner></Banner>
-            <hr className="hr-main my-6 "/>
+            <hr className="hr-main my-0 "/>
             <Colleges></Colleges>
             <hr className="hr-main my-6 "/>
             <Gallery></Gallery>

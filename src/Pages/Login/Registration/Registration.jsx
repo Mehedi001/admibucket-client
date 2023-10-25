@@ -1,9 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useContext, useState } from 'react';
 import { updateProfile } from 'firebase/auth';
-
 import Swal from 'sweetalert2';
 import { AuthContext } from "../../../components/AuthProvider/AuthProvider";
 

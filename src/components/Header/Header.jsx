@@ -15,7 +15,7 @@ const Header = () => {
         <li><Link className="hover:bg-[#187E89] hover:text-white text-[#187E89]" to="/myCollege">My College</Link></li></>
 
     return (
-        <nav className="navbar border-[#187E89] border border-b-1 pb-4">
+        <nav className="navbar border-[#187E89] border border-x-0 border-t-0 border-b-1 pb-4">
             
             <div className="navbar-start">
                 <div className="dropdown">

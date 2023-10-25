@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 const AdmissionForm = () => {

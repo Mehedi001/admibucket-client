@@ -1,15 +1,25 @@
-import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
+import { useContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { ImSpinner4 } from "react-icons/im";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 
 
 const Admission = () => {
     const [colleges, setColleges] = useState();
+    const {loading, setLoading} = useContext(AuthContext);
     useEffect(() => {
+        setLoading(true)
         fetch('https://admibucket-server.vercel.app/colleges')
             .then(res => res.json())
-            .then(data => setColleges(data))
+            .then(data => {
+                setColleges(data)
+                setLoading(false)
+            })
     }, [])
+    if(loading){
+        return (<div className="h-screen "><ImSpinner4 className='text-9xl h-screen text-[#187E89] mx-auto animate-spin '/></div>);
+    }
     return (
         
         <div className="bg-white h-screen rounded-xl  my-12">

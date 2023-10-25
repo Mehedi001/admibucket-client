@@ -2,21 +2,30 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+import { ImSpinner4 } from "react-icons/im";
 
 
 const MyColleges = () => {
     const { user } = useContext(AuthContext);
     const [colleges, setColleges] = useState([]);
+    const {loading, setLoading} = useContext(AuthContext);
 
     useEffect(() => {
+        setLoading(true)
         fetch(`https://admibucket-server.vercel.app/usermail?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
 
                 setColleges(data);
+                
             })
+            setLoading(false);
     }, [user?.email])
+
+    if(loading){
+        return (<div className="h-screen "><ImSpinner4 className='text-9xl h-screen text-[#187E89] mx-auto animate-spin '/></div>);
+    }
     return (
         <div className='lg:px-8 py-4 lg:py-8'>
             <Helmet>

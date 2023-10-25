@@ -19,7 +19,7 @@ const Review = () => {
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
             {
                 reviews.map(review=> <div
-                    key={review.id}
+                    key={review._id}
                     className="flex w-80 h-72 text-center flex-col justify-center items-center p-12 rounded-md text-gray-500 bg-gray-300"
                     >
                         <img className="rounded-full w-20" src={review.photo} alt="" />

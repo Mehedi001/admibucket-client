@@ -11,6 +11,7 @@ import Registration from "../Pages/Login/Registration/Registration";
 import PrivateRoute from "./PrivateRoutes";
 import AdmissionForm from "../Pages/Admission/AdmissionForm";
 import ReviewForm from "../Pages/Review/ReviewForm";
+import ForgotPassword from "../Pages/Login/ForgotPassword";
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
             {
                 path:"review/:id",
                 element: <PrivateRoute><ReviewForm></ReviewForm></PrivateRoute>
+            },
+            {
+                path:"reset",
+                element: <ForgotPassword></ForgotPassword>
             }
         ]
     },

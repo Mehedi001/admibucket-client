@@ -1,16 +1,28 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../components/AuthProvider/AuthProvider";
+import { ImSpinner4 } from "react-icons/im";
 
 
 const AllColleges = () => {
     const [colleges, setColleges] = useState();
+    const {loading, setLoading} = useContext(AuthContext);
     useEffect(() => {
+        setLoading(true)
         fetch('https://admibucket-server.vercel.app/colleges')
             .then(res => res.json())
-            .then(data => setColleges(data))
+            .then(data => {
+                setColleges(data)
+                setLoading(false);
+            })
+            
     }, [])
+
+    if(loading){
+        return (<div className="h-screen "><ImSpinner4 className='text-9xl h-screen text-[#187E89] mx-auto animate-spin '/></div>);
+    }
     return (
         <Fade>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto my-12 w-11/12 lg:w-9/12">

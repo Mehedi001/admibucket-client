@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 
